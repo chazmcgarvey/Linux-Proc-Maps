@@ -30,7 +30,7 @@ our @EXPORT_OK = qw(read_maps write_maps parse_maps_single_line format_maps_sing
 
 This module reads and writes F</proc/[pid]/maps> files that contain listed mapped memory regions.
 
-=method read_maps
+=func read_maps
 
 Read and parse a maps file, returning an arrayref of regions (each represented as a hashref). See
 L</parse_maps_single_line> to see the format of the hashrefs.
@@ -80,7 +80,7 @@ sub read_maps {
     return \@regions;
 }
 
-=method write_maps
+=func write_maps
 
 Returns a string with the contents of a maps file from the memory regions passed.
 
@@ -118,7 +118,7 @@ sub write_maps {
     return $out;
 }
 
-=method parse_maps_single_line
+=func parse_maps_single_line
 
 Parse and return a single line from a maps file into a region represented as a hashref.
 
@@ -179,7 +179,7 @@ sub parse_maps_single_line {
     };
 }
 
-=method format_maps_single_line
+=func format_maps_single_line
 
 Return a single line for a maps file from a region represented as a hashref.
 
