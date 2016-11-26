@@ -1,0 +1,12 @@
+*.bs
+*.o
+*.tar*
+*~
+/.build
+/.perl-version
+/Linux-Proc-Maps-*
+/MYMETA.*
+/Makefile
+/blib
+/local*
+/pm_to_blib
