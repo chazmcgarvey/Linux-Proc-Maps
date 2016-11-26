@@ -25,10 +25,12 @@ This module reads and writes `/proc/[pid]/maps` files that contain listed mapped
 
 # METHODS
 
-## read\_maps %args
+## read\_maps
 
 Read and parse a maps file, returning an arrayref of regions (each represented as a hashref). See
 ["parse\_maps\_single\_line"](#parse_maps_single_line) to see the format of the hashrefs.
+
+    my $regions = read_maps(%args);
 
 Arguments:
 
@@ -36,9 +38,11 @@ Arguments:
 - `pid` - Process ID (one of `file` or `pid` is required)
 - `mnt` - Absolute path where [proc(5)](http://man.he.net/man5/proc) is mounted (optional, default: `/proc`)
 
-## write\_maps \\@regions, %args
+## write\_maps
 
 Returns a string with the contents of a maps file from the memory regions passed.
+
+    my $file_content = write_maps(\@regions, %args);
 
 This is the opposite of ["read\_maps"](#read_maps).
 
@@ -47,9 +51,11 @@ Arguments:
 - `fh` - Write maps to this open file handle (optional)
 - `file` - Open this filepath and write maps to that file (optional)
 
-## parse\_maps\_single\_line $line
+## parse\_maps\_single\_line
 
 Parse and return a single line from a maps file into a region represented as a hashref.
+
+    my $region = parse_maps_single_line($line);
 
 For example,
 
@@ -71,9 +77,11 @@ becomes:
         pathname        => '/usr/sbin/gpm',
     }
 
-## format\_maps\_single\_line \\%region
+## format\_maps\_single\_line
 
 Return a single line for a maps file from a region represented as a hashref.
+
+    my $line = format_maps_single_line(\%region);
 
 This is the opposite of ["parse\_maps\_single\_line"](#parse_maps_single_line).
 
