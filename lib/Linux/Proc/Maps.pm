@@ -2,6 +2,7 @@ package Linux::Proc::Maps;
 # ABSTRACT: Read and write /proc/[pid]/maps files
 # KEYWORDS: linux proc procfs
 
+use 5.008;
 use warnings;
 use strict;
 
