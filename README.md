@@ -4,7 +4,7 @@ Linux::Proc::Maps - Read and write /proc/\[pid\]/maps files
 
 # VERSION
 
-version 0.001
+version 0.002
 
 # SYNOPSIS
 
@@ -23,7 +23,7 @@ version 0.001
 
 This module reads and writes `/proc/[pid]/maps` files that contain listed mapped memory regions.
 
-# METHODS
+# FUNCTIONS
 
 ## read\_maps
 
@@ -88,6 +88,12 @@ This is the opposite of ["parse\_maps\_single\_line"](#parse_maps_single_line).
 # SEE ALSO
 
 [proc(5)](http://man.he.net/man5/proc) describes the file format.
+
+# CAVEATS
+
+Integer overloading may occur if you try to parse memory regions from address spaces larger than
+your current architecture (or perl) supports. This is currently not fatal, though you will get
+warnings from perl that you probably shouldn't ignore.
 
 # BUGS
 
