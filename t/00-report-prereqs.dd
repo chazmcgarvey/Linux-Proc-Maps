@@ -15,6 +15,7 @@ do { my $x = {
                                       'Test::CPAN::Meta' => '0',
                                       'Test::CleanNamespaces' => '0.15',
                                       'Test::EOL' => '0',
+                                      'Test::MinimumVersion' => '0',
                                       'Test::More' => '0.96',
                                       'Test::NoTabs' => '0',
                                       'Test::Pod' => '1.41',
@@ -29,6 +30,7 @@ do { my $x = {
                                       'Exporter' => '0',
                                       'File::Spec::Functions' => '0',
                                       'namespace::clean' => '0',
+                                      'perl' => '5.008',
                                       'strict' => '0',
                                       'warnings' => '0'
                                     }
@@ -44,8 +46,7 @@ do { my $x = {
                                    'IPC::Open3' => '0',
                                    'Path::Tiny' => '0',
                                    'Test::More' => '0',
-                                   'blib' => '1.01',
-                                   'perl' => '5.006'
+                                   'blib' => '1.01'
                                  }
                  }
      };

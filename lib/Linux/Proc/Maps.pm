@@ -2,10 +2,11 @@ package Linux::Proc::Maps;
 # ABSTRACT: Read and write /proc/[pid]/maps files
 # KEYWORDS: linux proc procfs
 
+use 5.008;
 use warnings;
 use strict;
 
-our $VERSION = '0.001'; # VERSION
+our $VERSION = '0.002'; # VERSION
 
 use Carp qw(croak);
 use Exporter qw(import);
@@ -133,7 +134,7 @@ Linux::Proc::Maps - Read and write /proc/[pid]/maps files
 
 =head1 VERSION
 
-version 0.001
+version 0.002
 
 =head1 SYNOPSIS
 
@@ -152,7 +153,7 @@ version 0.001
 
 This module reads and writes F</proc/[pid]/maps> files that contain listed mapped memory regions.
 
-=head1 METHODS
+=head1 FUNCTIONS
 
 =head2 read_maps
 
@@ -238,6 +239,12 @@ This is the opposite of L</parse_maps_single_line>.
 =head1 SEE ALSO
 
 L<proc(5)> describes the file format.
+
+=head1 CAVEATS
+
+Integer overloading may occur if you try to parse memory regions from address spaces larger than
+your current architecture (or perl) supports. This is currently not fatal, though you will get
+warnings from perl that you probably shouldn't ignore.
 
 =head1 BUGS
 

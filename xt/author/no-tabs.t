@@ -21,7 +21,8 @@ my @files = (
     'xt/author/pod-syntax.t',
     'xt/author/portability.t',
     'xt/release/cpan-changes.t',
-    'xt/release/distmeta.t'
+    'xt/release/distmeta.t',
+    'xt/release/minimum-version.t'
 );
 
 notabs_ok($_) foreach @files;

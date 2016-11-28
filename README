@@ -4,7 +4,7 @@ NAME
 
 VERSION
 
-    version 0.001
+    version 0.002
 
 SYNOPSIS
 
@@ -24,7 +24,7 @@ DESCRIPTION
     This module reads and writes /proc/[pid]/maps files that contain listed
     mapped memory regions.
 
-METHODS
+FUNCTIONS
 
  read_maps
 
@@ -97,6 +97,13 @@ METHODS
 SEE ALSO
 
     proc(5) describes the file format.
+
+CAVEATS
+
+    Integer overloading may occur if you try to parse memory regions from
+    address spaces larger than your current architecture (or perl)
+    supports. This is currently not fatal, though you will get warnings
+    from perl that you probably shouldn't ignore.
 
 BUGS
 

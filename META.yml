@@ -10,7 +10,6 @@ build_requires:
   Path::Tiny: '0'
   Test::More: '0'
   blib: '1.01'
-  perl: '5.006'
 configure_requires:
   ExtUtils::MakeMaker: '0'
 dynamic_config: 0
@@ -34,18 +33,19 @@ no_index:
 provides:
   Linux::Proc::Maps:
     file: lib/Linux/Proc/Maps.pm
-    version: '0.001'
+    version: '0.002'
 requires:
   Carp: '0'
   Exporter: '0'
   File::Spec::Functions: '0'
   namespace::clean: '0'
+  perl: '5.008'
   strict: '0'
   warnings: '0'
 resources:
   bugtracker: https://github.com/chazmcgarvey/Linux-Proc-Maps/issues
   homepage: https://github.com/chazmcgarvey/Linux-Proc-Maps
   repository: https://github.com/chazmcgarvey/Linux-Proc-Maps.git
-version: '0.001'
+version: '0.002'
 x_authority: cpan:CCM
 x_serialization_backend: 'YAML::Tiny version 1.69'
