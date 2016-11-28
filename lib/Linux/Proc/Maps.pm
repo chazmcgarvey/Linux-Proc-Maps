@@ -206,6 +206,12 @@ sub format_maps_single_line {
 
 L<proc(5)> describes the file format.
 
+=head1 CAVEATS
+
+Integer overloading may occur if you try to parse memory regions from address spaces larger than
+your current architecture (or perl) supports. This is currently not fatal, though you will get
+warnings from perl that you probably shouldn't ignore.
+
 =cut
 
 1;
