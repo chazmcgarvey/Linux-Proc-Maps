@@ -20,4 +20,4 @@ install:
    - sparrow plg install linux-proc-maps-smoke
 script:
    - dzil smoke --release --author
-   - sparrow plg run linux-proc-maps-smoke
+   - "export PERL5LIB=$PWD/lib && sparrow plg run linux-proc-maps-smoke"
